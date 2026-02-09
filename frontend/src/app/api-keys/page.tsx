@@ -10,26 +10,36 @@ import { ApiKeysList, ApiKey } from "@/components/api-keys/ApiKeysList";
 import { CreateKeyDialog } from "@/components/api-keys/CreateKeyDialog";
 import { DeleteKeyDialog } from "@/components/api-keys/DeleteKeyDialog";
 
+const DASHBOARD_API_KEY = process.env.NEXT_PUBLIC_DASHBOARD_API_KEY || 'dashboard-internal';
+
 const fetchKeys = async () => {
-    const res = await fetch('/api/keys');
+    const res = await fetch('/api/keys', {
+        headers: { 'x-api-key': DASHBOARD_API_KEY }
+    });
     return res.json();
 };
 
 const createKey = async (name: string) => {
     const res = await fetch('/api/keys', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json', 'x-api-key': DASHBOARD_API_KEY },
         body: JSON.stringify({ name })
     });
     return res.json();
 };
 
 const revokeKey = async (id: string) => {
-    await fetch(`/api/keys/${id}/revoke`, { method: 'PATCH' });
+    await fetch(`/api/keys/${id}/revoke`, {
+        method: 'PATCH',
+        headers: { 'x-api-key': DASHBOARD_API_KEY }
+    });
 };
 
 const deleteKey = async (id: string) => {
-    await fetch(`/api/keys/${id}`, { method: 'DELETE' });
+    await fetch(`/api/keys/${id}`, {
+        method: 'DELETE',
+        headers: { 'x-api-key': DASHBOARD_API_KEY }
+    });
 };
 
 export default function ApiKeysPage() {
