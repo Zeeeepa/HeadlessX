@@ -179,6 +179,8 @@ const OUTPUT_TYPES: { id: OutputType; label: string; icon: LucideIcon }[] = [
     { id: 'pdf', label: 'PDF', icon: FileDown },
 ];
 
+const DASHBOARD_API_KEY = process.env.NEXT_PUBLIC_DASHBOARD_API_KEY || 'dashboard-internal';
+
 // Profile type
 interface Profile {
     id: string;
@@ -192,7 +194,7 @@ interface Profile {
 // Fetch profiles
 const fetchProfiles = async () => {
     const res = await fetch('/api/profiles', {
-        headers: { 'x-api-key': 'dashboard-internal' }
+        headers: { 'x-api-key': DASHBOARD_API_KEY }
     });
     return res.json();
 };
@@ -492,7 +494,7 @@ export default function WebsiteScraperPage() {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    'x-api-key': 'test-key-dashboard'
+                    'x-api-key': DASHBOARD_API_KEY
                 },
                 body: JSON.stringify({
                     url,

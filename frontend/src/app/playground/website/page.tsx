@@ -9,10 +9,12 @@ import { ScraperHeader } from '@/components/playground/website/ScraperHeader';
 import { ConfigurationPanel } from '@/components/playground/website/ConfigurationPanel';
 import { ResultsPanel } from '@/components/playground/website/ResultsPanel';
 
+const DASHBOARD_API_KEY = process.env.NEXT_PUBLIC_DASHBOARD_API_KEY || 'dashboard-internal';
+
 // Fetch profiles
 const fetchProfiles = async () => {
     const res = await fetch('/api/profiles', {
-        headers: { 'x-api-key': process.env.NEXT_PUBLIC_DASHBOARD_API_KEY || 'dashboard-internal' }
+        headers: { 'x-api-key': DASHBOARD_API_KEY }
     });
     // Handle potential API transform if needed, or assume consistent response
     return res.json();
@@ -98,7 +100,7 @@ function WebsiteScraperContent() {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    'x-api-key': 'test-key-dashboard' // Should use env var in prod
+                    'x-api-key': DASHBOARD_API_KEY
                 },
                 body: JSON.stringify({
                     url,

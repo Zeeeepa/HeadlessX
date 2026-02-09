@@ -8,9 +8,9 @@ import { ConfigurationPanel } from '@/components/playground/google-serp/Configur
 import { ResultsPanel } from '@/components/playground/google-serp/ResultsPanel';
 import { SearchResponse, Profile, ProgressStep } from '@/components/playground/google-serp/types';
 
+const DASHBOARD_API_KEY = process.env.NEXT_PUBLIC_DASHBOARD_API_KEY || 'dashboard-internal';
+
 const fetchProfiles = async () => {
-    // Dashboard API key from environment or fallback
-    const DASHBOARD_API_KEY = process.env.NEXT_PUBLIC_DASHBOARD_API_KEY || 'dashboard-internal';
     const res = await fetch('/api/profiles', {
         headers: { 'x-api-key': DASHBOARD_API_KEY }
     });
@@ -87,7 +87,7 @@ export default function GoogleSerpPage() {
                 method: 'GET',
                 headers: {
                     'Accept': 'text/event-stream',
-                    'x-api-key': 'test-key-dashboard', // Dashboard API key
+                    'x-api-key': DASHBOARD_API_KEY
                 },
             });
 

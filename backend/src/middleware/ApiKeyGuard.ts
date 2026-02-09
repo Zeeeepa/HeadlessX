@@ -15,6 +15,7 @@ export const ApiKeyGuard = async (req: Request, res: Response, next: NextFunctio
     try {
         const apiKey = req.headers['x-api-key'] as string;
         const clientIp = req.ip || req.socket.remoteAddress;
+        const dashboardApiKey = process.env.DASHBOARD_INTERNAL_API_KEY || 'dashboard-internal';
 
         // 1. Internal / Localhost Trust
         // If request is from localhost, allow it (Dashboard usage)
@@ -24,7 +25,7 @@ export const ApiKeyGuard = async (req: Request, res: Response, next: NextFunctio
         }
 
         // 2. Dashboard internal key (for frontend-backend communication)
-        if (apiKey === 'dashboard-internal' || apiKey === 'test-key-dashboard') {
+        if (apiKey === dashboardApiKey) {
             req.isInternal = true;
             return next();
         }
