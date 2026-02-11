@@ -23,6 +23,13 @@
         "camoufox:fetch": "pnpm --filter headlessx-backend exec npx camoufox-js fetch",
         "install:all": "pnpm install"
     },
+    "pnpm": {
+        "overrides": {
+            "@isaacs/brace-expansion": ">=5.0.1",
+            "hono": ">=4.11.9",
+            "lodash": ">=4.17.23"
+        }
+    },
     "devDependencies": {
         "concurrently": "^9.1.2",
         "cross-env": "^10.1.0",
