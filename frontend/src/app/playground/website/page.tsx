@@ -51,13 +51,15 @@ function WebsiteScraperContent() {
 
     // Timer logic
     useEffect(() => {
-        let interval: NodeJS.Timeout;
+        let interval: ReturnType<typeof setInterval> | undefined;
         if (startTime) {
             interval = setInterval(() => {
                 setElapsedTime(Date.now() - startTime);
             }, 100);
         }
-        return () => clearInterval(interval);
+        return () => {
+            if (interval) clearInterval(interval);
+        };
     }, [startTime]);
 
     // Cleanup abort controller on unmount

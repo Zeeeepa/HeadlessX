@@ -11,12 +11,13 @@
   },
   "scripts": {
     "preinstall": "npx only-allow pnpm",
-    "start": "tsx src/server_entry.ts",
+    "start": "dotenv -e ../.env -- tsx src/server_entry.ts",
     "dev": "tsx watch src/server_entry.ts",
     "build": "tsc",
     "postinstall": "npx camoufox-js fetch && (prisma generate || echo '⚠️ Prisma generate skipped - configure DATABASE_URL in backend/.env and run: pnpm db:push')",
     "db:push": "prisma db push",
     "db:migrate": "prisma migrate dev",
+    "db:deploy": "dotenv -e ../.env -- prisma migrate deploy",
     "db:studio": "prisma studio",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -54,6 +55,7 @@
     "@types/express": "^5.0.6",
     "@types/node": "^25.0.10",
     "@types/turndown": "^5.0.6",
+    "dotenv-cli": "^8.0.0",
     "only-allow": "^1.2.1",
     "ts-node": "^10.9.2",
     "tsx": "^4.21.0",

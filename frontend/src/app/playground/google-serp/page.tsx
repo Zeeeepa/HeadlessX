@@ -32,7 +32,7 @@ export default function GoogleSerpPage() {
     const [elapsedTime, setElapsedTime] = useState<number | null>(null);
 
     // Timer Ref
-    const timerRef = useRef<NodeJS.Timeout | null>(null);
+    const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
     // Fetch profiles
     const { data: profilesData } = useQuery({
@@ -158,7 +158,8 @@ export default function GoogleSerpPage() {
             setIsStreaming(false);
         } catch (err: any) {
             console.error('Stream error:', err);
-            setError(err.message || 'Connection failed');
+            const message = err instanceof Error ? err.message : String(err);
+            setError(message || 'Connection failed');
             setIsLoading(false);
             setIsStreaming(false);
         }

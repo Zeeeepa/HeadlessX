@@ -44,7 +44,7 @@ export function StatusButton({
     useEffect(() => {
         if (controlledStatus) return;
 
-        let timer: NodeJS.Timeout;
+        let timer: ReturnType<typeof setTimeout>;
         if (internalStatus === 'loading') {
             timer = setTimeout(() => setInternalStatus('success'), 2500);
         } else if (internalStatus === 'success') {
