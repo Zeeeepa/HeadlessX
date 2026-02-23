@@ -112,14 +112,14 @@
 
 <div align="center">
 
-| <img src="frontend/public/icons/google.svg" width="40"/> **Google SERP** |          🌐 **Website Scraping**           |
+| <img src="apps/web/public/icons/google.svg" width="40"/> **Google SERP** |          🌐 **Website Scraping**           |
 | :----------------------------------------------------------------------: | :---------------------------------------: |
 |                Extract search results with zero detection                | Scrape any website with full JS rendering |
 |                                ✅ **Live**                                |                ✅ **Live**                 |
 
 ### Coming Soon
 
-| <img src="frontend/public/icons/amazon.svg" width="40"/> **Amazon** | <img src="frontend/public/icons/linkedin.svg" width="40"/> **LinkedIn** | <img src="frontend/public/icons/twitter.svg" width="40"/> **Twitter** | <img src="frontend/public/icons/instagram.svg" width="40"/> **Instagram** |
+| <img src="apps/web/public/icons/amazon.svg" width="40"/> **Amazon** | <img src="apps/web/public/icons/linkedin.svg" width="40"/> **LinkedIn** | <img src="apps/web/public/icons/twitter.svg" width="40"/> **Twitter** | <img src="apps/web/public/icons/instagram.svg" width="40"/> **Instagram** |
 | :-----------------------------------------------------------------: | :---------------------------------------------------------------------: | :-------------------------------------------------------------------: | :-----------------------------------------------------------------------: |
 |                          Product & Reviews                          |                         Job Listings & Profiles                         |                            Tweets & Trends                            |                              Posts & Stories                              |
 
@@ -200,8 +200,10 @@
 ## ⚡ Quick Start
 
 > **Prerequisites**: 
-> - [Node.js 18+](https://nodejs.org/) (v22+ recommended)
+> - [Node.js 22+](https://nodejs.org/)
 > - [pnpm 9+](https://pnpm.io/) (`npm install -g pnpm`)
+> - [Mise](https://mise.jdx.dev/) (Task Runner)
+> - [Docker](https://www.docker.com/) (Optional, for containerized deployment)
 > - **PostgreSQL Database** — either:
 >   - [Supabase](https://supabase.com/) (recommended, free tier available)
 >   - Self-hosted PostgreSQL 14+
@@ -213,107 +215,63 @@ git clone https://github.com/your-repo/HeadlessX.git
 cd HeadlessX
 
 # Copy environment template
-cp .env.example backend/.env
+cp .env.example .env
 ```
 
-**Edit `backend/.env`** with your database connection:
+**Edit `.env`** with your database connection:
 
 ```env
 # REQUIRED: Your PostgreSQL connection string
 DATABASE_URL="postgresql://user:password@host:5432/database"
 
 # Optional: Server configuration
-PORT=3001
+PORT=8000
 NODE_ENV=development
 ```
 
-> 💡 **Supabase Users**: Find your connection string at:  
-> Dashboard → Settings → Database → Connection String (URI)
+### 2️⃣ Install Dependencies & Setup
 
-### 2️⃣ Install Dependencies
-
+Using Mise (Recommended):
 ```bash
-# Install all packages (workspace: root, backend, frontend)
+# Install dependencies, setup database, and download Camoufox
+mise run setup
+```
+
+Or manually:
+```bash
 pnpm install
+pnpm --filter api db:push
+pnpm --filter api exec camoufox-js fetch
 ```
 
-> ⚠️ If you see a Prisma warning during install, that's normal!  
-> It means you need to configure `DATABASE_URL` first, then run `pnpm db:push`.
+### 3️⃣ Start Development Server
 
-### 3️⃣ Install AI Models (CAPTCHA Solving)
-
-<table>
-<tr>
-<td><strong>Windows</strong></td>
-<td><strong>Linux / macOS</strong></td>
-</tr>
-<tr>
-<td>
-
-```powershell
-install.bat
-```
-
-</td>
-<td>
-
-```bash
-chmod +x install.sh
-./install.sh
-```
-
-</td>
-</tr>
-</table>
-
-### 4️⃣ Setup Database
-
-```bash
-# Push Prisma schema to your database
-pnpm db:push
-
-# Or use migrations for production
-pnpm db:migrate
-```
-
-### 5️⃣ Start Development Server
-
+Using Mise (Recommended):
 ```bash
 # Start both frontend and backend concurrently
+mise run dev
+```
+
+Or manually:
+```bash
 pnpm dev
 ```
 
-**Or start individually:**
+### 🐳 Docker Deployment
 
-<table>
-<tr>
-<td><strong>Windows</strong></td>
-<td><strong>Linux / macOS</strong></td>
-</tr>
-<tr>
-<td>
-
-```powershell
-scripts\start.bat
-```
-
-</td>
-<td>
+HeadlessX can be easily deployed using Docker Compose. See the [Docker Setup Guide](docs/docker_setup.md) for detailed instructions.
 
 ```bash
-./scripts/start.sh
+# Start the application in detached mode
+docker compose -f infra/docker/docker-compose.yml up -d
 ```
-
-</td>
-</tr>
-</table>
 
 ### 6️⃣ Access the Application
 
 | Service           | URL                                            | Notes       |
 | ----------------- | ---------------------------------------------- | ----------- |
 | 🖥️ **Dashboard**   | [http://localhost:3000](http://localhost:3000) | Frontend UI |
-| 🔗 **Backend API** | [http://localhost:3001](http://localhost:3001) | REST API    |
+| 🔗 **Backend API** | [http://localhost:8000](http://localhost:8000) | REST API    |
 
 ### Custom Ports
 
@@ -321,10 +279,10 @@ You can customize ports via environment variables:
 
 ```bash
 # Backend (from root)
-cross-env PORT=4001 pnpm dev:backend
+PORT=8000 pnpm --filter api dev
 
-# Frontend (Linux/macOS)
-PORT=4000 pnpm --filter headlessx-frontend dev
+# Frontend
+PORT=3000 pnpm --filter web dev
 ```
 
 ---
@@ -388,7 +346,7 @@ PORT=4000 pnpm --filter headlessx-frontend dev
 ### Example Request
 
 ```bash
-curl -X POST http://localhost:3001/api/website/html \
+curl -X POST http://localhost:8000/api/website/html \
   -H "Content-Type: application/json" \
   -H "X-API-Key: your-api-key" \
   -d '{"url": "https://example.com", "stealth": true}'
@@ -420,9 +378,9 @@ Only the following core variables are required in `.env`:
 
 | Variable              | Default                 | Description                                     |
 | --------------------- | ----------------------- | ----------------------------------------------- |
-| `PORT`                | `3001`                  | Backend API port                                |
+| `PORT`                | `8000`                  | Backend API port                                |
 | `DATABASE_URL`        | -                       | PostgreSQL connection (Supabase or self-hosted) |
-| `NEXT_PUBLIC_API_URL` | `http://localhost:3001` | Frontend API URL                                |
+| `NEXT_PUBLIC_API_URL` | `http://localhost:8000` | Frontend API URL                                |
 
 ### Dashboard Settings
 
@@ -449,7 +407,7 @@ Configure these live at `/settings`:
 ### Backend
 
 ```bash
-cd backend
+cd apps/api
 
 # 1. Configure environment
 cp ../.env.example .env
@@ -471,7 +429,7 @@ pnpm dev
 ### Frontend
 
 ```bash
-cd frontend
+cd apps/web
 pnpm install
 pnpm dev
 ```
