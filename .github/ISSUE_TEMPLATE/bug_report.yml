@@ -50,12 +50,26 @@ body:
     validations:
       required: true
 
+  - type: dropdown
+    id: affected-app
+    attributes:
+      label: Affected App/Package
+      description: Which part of the monorepo is affected?
+      options:
+        - apps/web (Frontend Dashboard)
+        - apps/api (Backend API)
+        - scripts (Utility Scripts)
+        - infrastructure (Docker, CI/CD)
+        - other
+    validations:
+      required: true
+
   - type: input
     id: environment
     attributes:
       label: Environment
-      description: What environment are you running on?
-      placeholder: "Ubuntu 22.04, Node.js 20.5.0, Docker 24.0.0"
+      description: What environment are you running on? (OS, Node version, pnpm version, Mise version)
+      placeholder: "Ubuntu 22.04, Node.js 22.0.0, pnpm 9.15.0, Mise 2024.x"
     validations:
       required: true
 

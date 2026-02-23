@@ -1,0 +1,65 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: headlessx-postgres
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
+      POSTGRES_DB: ${POSTGRES_DB:-headlessx}
+    ports:
+      - "${POSTGRES_HOST_PORT:-5432}:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-postgres} -d ${POSTGRES_DB:-headlessx}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - headlessx-network
+    profiles: ["db", "all"]
+
+  api:
+    build:
+      context: ../../
+      dockerfile: infra/docker/api.Dockerfile
+    container_name: headlessx-api
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      - DATABASE_URL=postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgres}@postgres:5432/${POSTGRES_DB:-headlessx}?schema=public
+      - PORT=${PORT:-8000}
+      - NODE_ENV=production
+    ports:
+      - "${PORT:-8000}:${PORT:-8000}"
+    volumes:
+      - ../../apps/api/models:/app/apps/api/models
+    networks:
+      - headlessx-network
+    profiles: ["api", "all"]
+
+  web:
+    build:
+      context: ../../
+      dockerfile: infra/docker/web.Dockerfile
+    container_name: headlessx-web
+    depends_on:
+      - api
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:${PORT:-8000}
+      - NODE_ENV=production
+    ports:
+      - "${WEB_PORT:-3000}:3000"
+    networks:
+      - headlessx-network
+    profiles: ["web", "all"]
+
+volumes:
+  pgdata:
+
+networks:
+  headlessx-network:
+    driver: bridge

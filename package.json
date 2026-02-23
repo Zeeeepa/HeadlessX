@@ -21,6 +21,7 @@
         "db:studio": "nx run headlessx-api:db:studio",
         "db:deploy": "nx run headlessx-api:db:deploy",
         "camoufox:fetch": "nx run headlessx-api:camoufox:fetch",
+        "models:download": "python3 scripts/download_models.py",
         "install:all": "pnpm install"
     },
     "pnpm": {
