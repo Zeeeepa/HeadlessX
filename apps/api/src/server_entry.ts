@@ -5,7 +5,7 @@ import { profileService } from './services/ProfileService';
 // Now import app after env is loaded
 import app from './app';
 
-const PORT = parseInt(process.env.PORT || '3001', 10);
+const PORT = parseInt(process.env.PORT || '8000', 10);
 
 async function startServer() {
     try {

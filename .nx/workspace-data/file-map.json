@@ -1,0 +1,1064 @@
+{
+  "version": "6.0",
+  "nxVersion": "22.5.2",
+  "pathMappings": {},
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "nonProjectFiles": [
+      {
+        "file": ".env.example",
+        "hash": "11998633640155779739"
+      },
+      {
+        "file": ".eslintignore",
+        "hash": "4117009420683251885"
+      },
+      {
+        "file": ".github/DISCUSSION_CATEGORIES.md",
+        "hash": "13069029412864191896"
+      },
+      {
+        "file": ".github/DISCUSSION_TEMPLATE/announcements.yml",
+        "hash": "708988112765479914"
+      },
+      {
+        "file": ".github/DISCUSSION_TEMPLATE/ideas.yml",
+        "hash": "16612473419507399975"
+      },
+      {
+        "file": ".github/DISCUSSION_TEMPLATE/q-and-a.yml",
+        "hash": "669764953238324576"
+      },
+      {
+        "file": ".github/FUNDING.yml",
+        "hash": "17456297652942669343"
+      },
+      {
+        "file": ".github/ISSUE_TEMPLATE/bug_report.yml",
+        "hash": "12171403200316963180"
+      },
+      {
+        "file": ".github/ISSUE_TEMPLATE/feature_request.yml",
+        "hash": "4203042071484682427"
+      },
+      {
+        "file": ".github/ISSUE_TEMPLATE/security.yml",
+        "hash": "13929148791090782714"
+      },
+      {
+        "file": ".github/pull_request_template.md",
+        "hash": "12495847056596409684"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "7407192929439515956"
+      },
+      {
+        "file": ".npmrc",
+        "hash": "2892779611219930125"
+      },
+      {
+        "file": ".prettierrc.json",
+        "hash": "7963136441313748915"
+      },
+      {
+        "file": ".semgrepignore",
+        "hash": "2066840344760676284"
+      },
+      {
+        "file": "CODE_OF_CONDUCT.md",
+        "hash": "3444536512814204141"
+      },
+      {
+        "file": "CONTRIBUTING.md",
+        "hash": "13881432563231501970"
+      },
+      {
+        "file": "LICENSE",
+        "hash": "4383802873678189918"
+      },
+      {
+        "file": "README.md",
+        "hash": "12185896897094288687"
+      },
+      {
+        "file": "SECURITY.md",
+        "hash": "5573071972181352778"
+      },
+      {
+        "file": "assets/Browserscan_Bot_Detection_Passed.png",
+        "hash": "17121059651133546576"
+      },
+      {
+        "file": "assets/Pixel_Human_Detection.png",
+        "hash": "5695698098324196300"
+      },
+      {
+        "file": "assets/USA_PROXY_TESTED.png",
+        "hash": "17916232070054822278"
+      },
+      {
+        "file": "assets/google-serp-results.png",
+        "hash": "7933870022196394319"
+      },
+      {
+        "file": "assets/logo-hr.svg",
+        "hash": "9952395392729839515"
+      },
+      {
+        "file": "assets/web-scrape-results.png",
+        "hash": "7647390058477280364"
+      },
+      {
+        "file": "audit-results.json",
+        "hash": "7240639669685655138"
+      },
+      {
+        "file": "biome.json",
+        "hash": "2245877966147482884"
+      },
+      {
+        "file": "knip.json",
+        "hash": "9365762168421515757"
+      },
+      {
+        "file": "mise.toml",
+        "hash": "5973901035370313085"
+      },
+      {
+        "file": "nx.json",
+        "hash": "3231161061334672056"
+      },
+      {
+        "file": "package.json",
+        "hash": "11462868117680661740"
+      },
+      {
+        "file": "pnpm-lock.yaml",
+        "hash": "13494153300525390505"
+      },
+      {
+        "file": "pnpm-workspace.yaml",
+        "hash": "1329770009706368896"
+      },
+      {
+        "file": "scripts/download_models.py",
+        "hash": "12037883411764022976"
+      },
+      {
+        "file": "scripts/install.bat",
+        "hash": "5374684518390761490"
+      },
+      {
+        "file": "scripts/install.sh",
+        "hash": "501537113472244044"
+      },
+      {
+        "file": "scripts/install_models.bat",
+        "hash": "16927510140861571762"
+      },
+      {
+        "file": "scripts/install_models.sh",
+        "hash": "12559548023228491609"
+      },
+      {
+        "file": "scripts/start.bat",
+        "hash": "14853939816621745886"
+      },
+      {
+        "file": "scripts/start.sh",
+        "hash": "7248785429988351957"
+      }
+    ],
+    "projectFileMap": {
+      "headlessx-api": [
+        {
+          "file": "apps/api/.npmrc",
+          "hash": "2892779611219930125"
+        },
+        {
+          "file": "apps/api/debug_no_search_input.png",
+          "hash": "15659418192556141403"
+        },
+        {
+          "file": "apps/api/package-lock.json",
+          "hash": "1457673533918509816"
+        },
+        {
+          "file": "apps/api/package.json",
+          "hash": "4414690757508960307",
+          "deps": [
+            "npm:@types/cors",
+            "npm:@types/express",
+            "npm:@types/node",
+            "npm:@types/turndown",
+            "npm:dotenv-cli",
+            "npm:only-allow",
+            "npm:ts-node",
+            "npm:tsx",
+            "npm:typescript",
+            "npm:@prisma/adapter-pg",
+            "npm:@prisma/client",
+            "npm:@xenova/transformers",
+            "npm:axios",
+            "npm:camoufox-js",
+            "npm:cors",
+            "npm:dotenv",
+            "npm:express",
+            "npm:https-proxy-agent",
+            "npm:onnxruntime-web",
+            "npm:playwright-core",
+            "npm:prisma",
+            "npm:proxy-chain",
+            "npm:socks-proxy-agent",
+            "npm:turndown",
+            "npm:wavefile",
+            "npm:zod",
+            "npm:sharp"
+          ]
+        },
+        {
+          "file": "apps/api/prisma.config.ts",
+          "hash": "15582677145130416475",
+          "deps": [
+            "npm:dotenv",
+            "npm:prisma"
+          ]
+        },
+        {
+          "file": "apps/api/prisma/migrations/20260129070536_init_v2_schema/migration.sql",
+          "hash": "7897992570741425525"
+        },
+        {
+          "file": "apps/api/prisma/migrations/migration_lock.toml",
+          "hash": "872437952673290735"
+        },
+        {
+          "file": "apps/api/prisma/schema.prisma",
+          "hash": "10390225980875745614"
+        },
+        {
+          "file": "apps/api/src/app.ts",
+          "hash": "18372332905895136649",
+          "deps": [
+            "npm:express",
+            "npm:cors"
+          ]
+        },
+        {
+          "file": "apps/api/src/controllers/ConfigController.ts",
+          "hash": "16495571557434334647",
+          "deps": [
+            "npm:express"
+          ]
+        },
+        {
+          "file": "apps/api/src/controllers/DashboardController.ts",
+          "hash": "12868247243361712643",
+          "deps": [
+            "npm:express"
+          ]
+        },
+        {
+          "file": "apps/api/src/controllers/GoogleSerpController.ts",
+          "hash": "10800346983199572871",
+          "deps": [
+            "npm:express",
+            "npm:zod"
+          ]
+        },
+        {
+          "file": "apps/api/src/controllers/ProfileController.ts",
+          "hash": "12990172414113201065",
+          "deps": [
+            "npm:express",
+            "npm:zod"
+          ]
+        },
+        {
+          "file": "apps/api/src/controllers/ProxyController.ts",
+          "hash": "5891323258164016326",
+          "deps": [
+            "npm:express"
+          ]
+        },
+        {
+          "file": "apps/api/src/controllers/RequestController.ts",
+          "hash": "2079126647825028346",
+          "deps": [
+            "npm:express"
+          ]
+        },
+        {
+          "file": "apps/api/src/controllers/ScrapeController.ts",
+          "hash": "2820791654275506627",
+          "deps": [
+            "npm:express",
+            "npm:zod"
+          ]
+        },
+        {
+          "file": "apps/api/src/controllers/ScrapeControllerV2.ts",
+          "hash": "9963985677708277495",
+          "deps": [
+            "npm:express",
+            "npm:zod"
+          ]
+        },
+        {
+          "file": "apps/api/src/controllers/StreamingScrapeController.ts",
+          "hash": "8421238222613614689",
+          "deps": [
+            "npm:express",
+            "npm:zod"
+          ]
+        },
+        {
+          "file": "apps/api/src/database/client.ts",
+          "hash": "464784977963871690",
+          "deps": [
+            "npm:@prisma/client",
+            "npm:@prisma/adapter-pg"
+          ]
+        },
+        {
+          "file": "apps/api/src/env.ts",
+          "hash": "3463911644732407624",
+          "deps": [
+            "npm:dotenv"
+          ]
+        },
+        {
+          "file": "apps/api/src/middleware/ApiKeyGuard.ts",
+          "hash": "2508512111287755735",
+          "deps": [
+            "npm:express"
+          ]
+        },
+        {
+          "file": "apps/api/src/middleware/RequestLogger.ts",
+          "hash": "9733666032623716117",
+          "deps": [
+            "npm:express"
+          ]
+        },
+        {
+          "file": "apps/api/src/routes/configRoutes.ts",
+          "hash": "18185321844181921243",
+          "deps": [
+            "npm:express"
+          ]
+        },
+        {
+          "file": "apps/api/src/routes/dashboardRoutes.ts",
+          "hash": "14140041744948635270",
+          "deps": [
+            "npm:express"
+          ]
+        },
+        {
+          "file": "apps/api/src/routes/googleSerpRoutes.ts",
+          "hash": "1243386489803235653",
+          "deps": [
+            "npm:express"
+          ]
+        },
+        {
+          "file": "apps/api/src/routes/jobRoutes.ts",
+          "hash": "9580631956971669745",
+          "deps": [
+            "npm:express"
+          ]
+        },
+        {
+          "file": "apps/api/src/routes/keysRoutes.ts",
+          "hash": "7576120585513295702",
+          "deps": [
+            "npm:express"
+          ]
+        },
+        {
+          "file": "apps/api/src/routes/logsRoutes.ts",
+          "hash": "14161844679785037582",
+          "deps": [
+            "npm:express"
+          ]
+        },
+        {
+          "file": "apps/api/src/routes/profileRoutes.ts",
+          "hash": "10911720898425242154",
+          "deps": [
+            "npm:express"
+          ]
+        },
+        {
+          "file": "apps/api/src/routes/proxyRoutes.ts",
+          "hash": "4928816269020846202",
+          "deps": [
+            "npm:express"
+          ]
+        },
+        {
+          "file": "apps/api/src/routes/v1.ts",
+          "hash": "11914430792965709030",
+          "deps": [
+            "npm:express"
+          ]
+        },
+        {
+          "file": "apps/api/src/routes/v2.ts",
+          "hash": "3281631308512572371",
+          "deps": [
+            "npm:express"
+          ]
+        },
+        {
+          "file": "apps/api/src/routes/websiteRoutes.ts",
+          "hash": "17458294136615357346",
+          "deps": [
+            "npm:express"
+          ]
+        },
+        {
+          "file": "apps/api/src/server_entry.ts",
+          "hash": "8027055123382846151"
+        },
+        {
+          "file": "apps/api/src/services/BrowserService.ts",
+          "hash": "10977141759629986541",
+          "deps": [
+            "npm:camoufox-js",
+            "npm:playwright-core",
+            "npm:proxy-chain"
+          ]
+        },
+        {
+          "file": "apps/api/src/services/CaptchaSolverService.ts",
+          "hash": "2171381375800756011",
+          "deps": [
+            "npm:playwright-core",
+            "npm:@xenova/transformers",
+            "npm:onnxruntime-web",
+            "npm:sharp"
+          ]
+        },
+        {
+          "file": "apps/api/src/services/ConfigService.ts",
+          "hash": "14093238718876184337"
+        },
+        {
+          "file": "apps/api/src/services/GoogleSerpService.ts",
+          "hash": "16975658332204541715",
+          "deps": [
+            "npm:playwright-core"
+          ]
+        },
+        {
+          "file": "apps/api/src/services/JobManager.ts",
+          "hash": "4749405410748553625"
+        },
+        {
+          "file": "apps/api/src/services/MarkdownService.ts",
+          "hash": "1040924881645048417",
+          "deps": [
+            "npm:turndown"
+          ]
+        },
+        {
+          "file": "apps/api/src/services/ProfileService.ts",
+          "hash": "8267674172952919790"
+        },
+        {
+          "file": "apps/api/src/services/ProxyService.ts",
+          "hash": "13906568469549632281",
+          "deps": [
+            "npm:axios",
+            "npm:socks-proxy-agent",
+            "npm:https-proxy-agent"
+          ]
+        },
+        {
+          "file": "apps/api/src/services/ScraperService.ts",
+          "hash": "5341142369099392350",
+          "deps": [
+            "npm:playwright-core"
+          ]
+        },
+        {
+          "file": "apps/api/src/services/StreamingScraperService.ts",
+          "hash": "3590125344251626195",
+          "deps": [
+            "npm:playwright-core"
+          ]
+        },
+        {
+          "file": "apps/api/src/types/wavefile.d.ts",
+          "hash": "17165048014171593063"
+        },
+        {
+          "file": "apps/api/src/utils/paths.ts",
+          "hash": "6050282515001415456"
+        },
+        {
+          "file": "apps/api/test_profile_creation.ts",
+          "hash": "16954202634123524246",
+          "deps": [
+            "npm:@prisma/client",
+            "npm:@prisma/adapter-pg",
+            "npm:dotenv"
+          ]
+        },
+        {
+          "file": "apps/api/test_service_creation.ts",
+          "hash": "10994345599989704219",
+          "deps": [
+            "npm:dotenv"
+          ]
+        },
+        {
+          "file": "apps/api/tsconfig.json",
+          "hash": "7993092162643784598"
+        }
+      ],
+      "headlessx-web": [
+        {
+          "file": "apps/web/.gitignore",
+          "hash": "1867017717006394117"
+        },
+        {
+          "file": "apps/web/.npmrc",
+          "hash": "7672333188323327466"
+        },
+        {
+          "file": "apps/web/README.md",
+          "hash": "10766794746169900117"
+        },
+        {
+          "file": "apps/web/eslint.config.mjs",
+          "hash": "11456145150381806295",
+          "deps": [
+            "npm:eslint",
+            "npm:eslint-config-next"
+          ]
+        },
+        {
+          "file": "apps/web/mdx-components.tsx",
+          "hash": "17656296203727359693"
+        },
+        {
+          "file": "apps/web/mdx.config.mjs",
+          "hash": "151115255840214270",
+          "deps": [
+            "npm:remark-gfm"
+          ]
+        },
+        {
+          "file": "apps/web/next.config.ts",
+          "hash": "3782381476090094248",
+          "deps": [
+            "npm:@next/mdx",
+            "npm:next"
+          ]
+        },
+        {
+          "file": "apps/web/package.json",
+          "hash": "5670663541093064387",
+          "deps": [
+            "npm:@tailwindcss/postcss",
+            "npm:@tailwindcss/typography",
+            "npm:@types/node@20.19.33",
+            "npm:@types/react",
+            "npm:@types/react-dom",
+            "npm:babel-plugin-react-compiler",
+            "npm:eslint",
+            "npm:eslint-config-next",
+            "npm:only-allow",
+            "npm:tailwindcss",
+            "npm:typescript",
+            "npm:@base-ui/react",
+            "npm:@heroui/react",
+            "npm:@hugeicons/core-free-icons",
+            "npm:@hugeicons/react",
+            "npm:@mdx-js/loader",
+            "npm:@mdx-js/react",
+            "npm:@next/mdx",
+            "npm:@radix-ui/react-dialog",
+            "npm:@radix-ui/react-slot",
+            "npm:@tanstack/react-query",
+            "npm:@types/mdx",
+            "npm:class-variance-authority",
+            "npm:clsx",
+            "npm:date-fns",
+            "npm:framer-motion",
+            "npm:lucide-react",
+            "npm:motion",
+            "npm:next",
+            "npm:next-themes",
+            "npm:react",
+            "npm:react-dom",
+            "npm:react-markdown",
+            "npm:react-use-measure",
+            "npm:remark-gfm",
+            "npm:sonner",
+            "npm:tailwind-merge",
+            "npm:vaul"
+          ]
+        },
+        {
+          "file": "apps/web/postcss.config.mjs",
+          "hash": "12094959087305894889"
+        },
+        {
+          "file": "apps/web/public/favicon.svg",
+          "hash": "11217294486606677230"
+        },
+        {
+          "file": "apps/web/public/icons/amazon.svg",
+          "hash": "7353091725757184515"
+        },
+        {
+          "file": "apps/web/public/icons/amazon.webp",
+          "hash": "10330932814041656464"
+        },
+        {
+          "file": "apps/web/public/icons/facebook.svg",
+          "hash": "6809180186228003035"
+        },
+        {
+          "file": "apps/web/public/icons/google-maps.svg",
+          "hash": "17390698147434169801"
+        },
+        {
+          "file": "apps/web/public/icons/google.svg",
+          "hash": "10769729717569194343"
+        },
+        {
+          "file": "apps/web/public/icons/instagram.svg",
+          "hash": "7147587511531222520"
+        },
+        {
+          "file": "apps/web/public/icons/linkedin.svg",
+          "hash": "1097155470958607379"
+        },
+        {
+          "file": "apps/web/public/icons/reddit.svg",
+          "hash": "14613090994317036378"
+        },
+        {
+          "file": "apps/web/public/icons/tiktok.svg",
+          "hash": "15105526555646724742"
+        },
+        {
+          "file": "apps/web/public/icons/twitter.svg",
+          "hash": "5678080630913592379"
+        },
+        {
+          "file": "apps/web/public/icons/youtube.svg",
+          "hash": "14726718072802787090"
+        },
+        {
+          "file": "apps/web/public/logo.svg",
+          "hash": "15095610307056179886"
+        },
+        {
+          "file": "apps/web/src/app/(dashboard)/page.tsx",
+          "hash": "9772734084166866007"
+        },
+        {
+          "file": "apps/web/src/app/api-keys/page.tsx",
+          "hash": "8110006337063510542",
+          "deps": [
+            "npm:react",
+            "npm:lucide-react",
+            "npm:@tanstack/react-query"
+          ]
+        },
+        {
+          "file": "apps/web/src/app/error.tsx",
+          "hash": "2256741472665434813",
+          "deps": [
+            "npm:react",
+            "npm:@hugeicons/core-free-icons",
+            "npm:@hugeicons/react"
+          ]
+        },
+        {
+          "file": "apps/web/src/app/global-error.tsx",
+          "hash": "3135306991047145738",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/web/src/app/globals.css",
+          "hash": "9620152041828796619"
+        },
+        {
+          "file": "apps/web/src/app/layout.tsx",
+          "hash": "9032874192739261084",
+          "deps": [
+            "npm:next"
+          ]
+        },
+        {
+          "file": "apps/web/src/app/playground/google-serp/page.tsx",
+          "hash": "5039398803784229816",
+          "deps": [
+            "npm:react",
+            "npm:@tanstack/react-query"
+          ]
+        },
+        {
+          "file": "apps/web/src/app/playground/page.tsx",
+          "hash": "6445971229558495446",
+          "deps": [
+            "npm:next",
+            "npm:react",
+            "npm:@hugeicons/core-free-icons",
+            "npm:@hugeicons/react"
+          ]
+        },
+        {
+          "file": "apps/web/src/app/playground/website/page.tsx",
+          "hash": "1642418177934559753",
+          "deps": [
+            "npm:react",
+            "npm:next",
+            "npm:@tanstack/react-query"
+          ]
+        },
+        {
+          "file": "apps/web/src/app/profiles/page.tsx",
+          "hash": "10203072661629091119",
+          "deps": [
+            "npm:react",
+            "npm:@tanstack/react-query",
+            "npm:@hugeicons/core-free-icons",
+            "npm:@hugeicons/react",
+            "npm:date-fns"
+          ]
+        },
+        {
+          "file": "apps/web/src/app/providers.tsx",
+          "hash": "16182576481398457802",
+          "deps": [
+            "npm:@tanstack/react-query",
+            "npm:next-themes",
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/web/src/app/settings/page.tsx",
+          "hash": "17923699941386354770",
+          "deps": [
+            "npm:react",
+            "npm:@tanstack/react-query",
+            "npm:@hugeicons/core-free-icons",
+            "npm:@hugeicons/react"
+          ]
+        },
+        {
+          "file": "apps/web/src/components/DocsPageActions.tsx",
+          "hash": "3320458425101599942",
+          "deps": [
+            "npm:react",
+            "npm:lucide-react"
+          ]
+        },
+        {
+          "file": "apps/web/src/components/LogDrawer.tsx",
+          "hash": "5569900623209878482",
+          "deps": [
+            "npm:lucide-react"
+          ]
+        },
+        {
+          "file": "apps/web/src/components/MDXCodeBlock.tsx",
+          "hash": "122360043185704801",
+          "deps": [
+            "npm:react",
+            "npm:lucide-react"
+          ]
+        },
+        {
+          "file": "apps/web/src/components/api-keys/ApiKeysList.tsx",
+          "hash": "12463379885765924984",
+          "deps": [
+            "npm:date-fns",
+            "npm:@hugeicons/core-free-icons",
+            "npm:@hugeicons/react"
+          ]
+        },
+        {
+          "file": "apps/web/src/components/api-keys/ApiKeysSkeleton.tsx",
+          "hash": "5014865925575754325",
+          "deps": [
+            "npm:lucide-react"
+          ]
+        },
+        {
+          "file": "apps/web/src/components/api-keys/CreateKeyDialog.tsx",
+          "hash": "18077875764822376345",
+          "deps": [
+            "npm:lucide-react",
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/web/src/components/api-keys/DeleteKeyDialog.tsx",
+          "hash": "2510113849775021146"
+        },
+        {
+          "file": "apps/web/src/components/dashboard/Overview.tsx",
+          "hash": "6922734076574426601",
+          "deps": [
+            "npm:@tanstack/react-query",
+            "npm:@hugeicons/core-free-icons",
+            "npm:@hugeicons/react",
+            "npm:next"
+          ]
+        },
+        {
+          "file": "apps/web/src/components/dashboard/OverviewSkeleton.tsx",
+          "hash": "8430626171111069666"
+        },
+        {
+          "file": "apps/web/src/components/dashboard/ProxiesTab.tsx",
+          "hash": "9281166341675797345",
+          "deps": [
+            "npm:react",
+            "npm:@tanstack/react-query",
+            "npm:@hugeicons/core-free-icons",
+            "npm:@hugeicons/react"
+          ]
+        },
+        {
+          "file": "apps/web/src/components/dashboard/Sidebar.tsx",
+          "hash": "1888453261110892854",
+          "deps": [
+            "npm:next",
+            "npm:lucide-react",
+            "npm:@hugeicons/core-free-icons",
+            "npm:@hugeicons/react",
+            "npm:@tanstack/react-query"
+          ]
+        },
+        {
+          "file": "apps/web/src/components/playground/google-serp/ConfigurationPanel.tsx",
+          "hash": "7358643350908314287",
+          "deps": [
+            "npm:lucide-react",
+            "npm:@hugeicons/core-free-icons"
+          ]
+        },
+        {
+          "file": "apps/web/src/components/playground/google-serp/GoogleSerpHeader.tsx",
+          "hash": "4786136062404649782",
+          "deps": [
+            "npm:next",
+            "npm:lucide-react"
+          ]
+        },
+        {
+          "file": "apps/web/src/components/playground/google-serp/ResultsPanel.tsx",
+          "hash": "14789861513409793004",
+          "deps": [
+            "npm:react",
+            "npm:react-markdown",
+            "npm:remark-gfm",
+            "npm:framer-motion",
+            "npm:lucide-react"
+          ]
+        },
+        {
+          "file": "apps/web/src/components/playground/google-serp/types.ts",
+          "hash": "3204274164272092827"
+        },
+        {
+          "file": "apps/web/src/components/playground/website/ConfigurationPanel.tsx",
+          "hash": "16485568529292823938",
+          "deps": [
+            "npm:react",
+            "npm:lucide-react"
+          ]
+        },
+        {
+          "file": "apps/web/src/components/playground/website/ResultsPanel.tsx",
+          "hash": "8350849372019661819",
+          "deps": [
+            "npm:react",
+            "npm:react-markdown",
+            "npm:remark-gfm",
+            "npm:framer-motion",
+            "npm:lucide-react"
+          ]
+        },
+        {
+          "file": "apps/web/src/components/playground/website/ScraperHeader.tsx",
+          "hash": "7093535294901530330",
+          "deps": [
+            "npm:next",
+            "npm:lucide-react"
+          ]
+        },
+        {
+          "file": "apps/web/src/components/playground/website/types.ts",
+          "hash": "14737265364714259327",
+          "deps": [
+            "npm:lucide-react"
+          ]
+        },
+        {
+          "file": "apps/web/src/components/ui/CustomDropdown.tsx",
+          "hash": "11643566321693617387",
+          "deps": [
+            "npm:react",
+            "npm:@hugeicons/core-free-icons",
+            "npm:@hugeicons/react"
+          ]
+        },
+        {
+          "file": "apps/web/src/components/ui/PageHeader.tsx",
+          "hash": "16775361755830559130",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/web/src/components/ui/Skeleton.tsx",
+          "hash": "6053198947085786712"
+        },
+        {
+          "file": "apps/web/src/components/ui/badge.tsx",
+          "hash": "17168804999165799518",
+          "deps": [
+            "npm:react",
+            "npm:class-variance-authority"
+          ]
+        },
+        {
+          "file": "apps/web/src/components/ui/button.tsx",
+          "hash": "16849710781550169522",
+          "deps": [
+            "npm:@base-ui/react",
+            "npm:class-variance-authority"
+          ]
+        },
+        {
+          "file": "apps/web/src/components/ui/card.tsx",
+          "hash": "1415015102553557289",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/web/src/components/ui/delete-button.tsx",
+          "hash": "6993821180077739300",
+          "deps": [
+            "npm:@hugeicons/core-free-icons",
+            "npm:@hugeicons/react",
+            "npm:motion",
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/web/src/components/ui/dialog.tsx",
+          "hash": "3457330335931992100",
+          "deps": [
+            "npm:react",
+            "npm:@radix-ui/react-dialog",
+            "npm:@hugeicons/core-free-icons",
+            "npm:@hugeicons/react"
+          ]
+        },
+        {
+          "file": "apps/web/src/components/ui/drawer.tsx",
+          "hash": "4295434182649779126",
+          "deps": [
+            "npm:react",
+            "npm:vaul"
+          ]
+        },
+        {
+          "file": "apps/web/src/components/ui/input.tsx",
+          "hash": "10175370799650328827",
+          "deps": [
+            "npm:react",
+            "npm:@base-ui/react"
+          ]
+        },
+        {
+          "file": "apps/web/src/components/ui/stacked-list.tsx",
+          "hash": "5219721372285541817",
+          "deps": [
+            "npm:motion",
+            "npm:react",
+            "npm:@hugeicons/react",
+            "npm:@hugeicons/core-free-icons"
+          ]
+        },
+        {
+          "file": "apps/web/src/components/ui/status-button.tsx",
+          "hash": "742141982357775610",
+          "deps": [
+            "npm:motion",
+            "npm:@hugeicons/core-free-icons",
+            "npm:@hugeicons/react",
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/web/src/components/ui/swipe-button.tsx",
+          "hash": "9127305506475694988",
+          "deps": [
+            "npm:react",
+            "npm:lucide-react"
+          ]
+        },
+        {
+          "file": "apps/web/src/components/ui/switch.tsx",
+          "hash": "1013969170166358365",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/web/src/contexts/SidebarContext.tsx",
+          "hash": "13101562853924612062",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/web/src/lib/utils.ts",
+          "hash": "13905999257583134984",
+          "deps": [
+            "npm:clsx",
+            "npm:tailwind-merge"
+          ]
+        },
+        {
+          "file": "apps/web/src/mdx-components.tsx",
+          "hash": "2556260609976950281"
+        },
+        {
+          "file": "apps/web/src/mdx.d.ts",
+          "hash": "264140701512982947"
+        },
+        {
+          "file": "apps/web/tailwind.config.ts",
+          "hash": "13798337612798477757",
+          "deps": [
+            "npm:tailwindcss",
+            "npm:@tailwindcss/typography"
+          ]
+        },
+        {
+          "file": "apps/web/tsconfig.json",
+          "hash": "4712406221207789993"
+        }
+      ]
+    }
+  },
+  "externalNodesHash": "11931468023809704399"
+}

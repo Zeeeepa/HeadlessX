@@ -1,0 +1,21 @@
+{
+  "run": {
+    "command": "nx run headlessx-web:dev",
+    "startTime": "2026-02-23T12:24:14.173Z",
+    "endTime": "2026-02-23T12:24:16.338Z",
+    "inner": false
+  },
+  "tasks": [
+    {
+      "taskId": "headlessx-web:dev",
+      "target": "dev",
+      "projectName": "headlessx-web",
+      "hash": "10426369805423080669",
+      "startTime": "2026-02-23T12:24:14.237Z",
+      "endTime": "2026-02-23T12:24:16.334Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 1
+    }
+  ]
+}

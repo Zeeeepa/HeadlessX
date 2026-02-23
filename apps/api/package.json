@@ -1,5 +1,5 @@
 {
-  "name": "headlessx-backend",
+  "name": "headlessx-api",
   "version": "2.0.0",
   "description": "HeadlessX - Anti-detect browser scraping API with Camoufox",
   "main": "dist/server_entry.js",
@@ -11,13 +11,13 @@
   },
   "scripts": {
     "preinstall": "npx only-allow pnpm",
-    "start": "dotenv -e ../.env -- tsx src/server_entry.ts",
+    "start": "dotenv -e ../../.env -- tsx src/server_entry.ts",
     "dev": "tsx watch src/server_entry.ts",
     "build": "tsc",
-    "postinstall": "npx camoufox-js fetch && (prisma generate || echo '⚠️ Prisma generate skipped - configure DATABASE_URL in backend/.env and run: pnpm db:push')",
+    "postinstall": "npx camoufox-js fetch && (prisma generate || echo '⚠️ Prisma generate skipped - configure DATABASE_URL in .env and run: pnpm db:push')",
     "db:push": "prisma db push",
     "db:migrate": "prisma migrate dev",
-    "db:deploy": "dotenv -e ../.env -- prisma migrate deploy",
+    "db:deploy": "dotenv -e ../../.env -- prisma migrate deploy",
     "db:studio": "prisma studio",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
