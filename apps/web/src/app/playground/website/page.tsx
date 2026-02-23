@@ -95,7 +95,7 @@ function WebsiteScraperContent() {
         try {
             // For demo purposes in this refactor, we assume the backend endpoint exists
             // Real implementation matches previous logic
-            const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
+            const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
             const backendUrl = `${apiUrl}/api/website/stream`;
 
             const response = await fetch(backendUrl, {

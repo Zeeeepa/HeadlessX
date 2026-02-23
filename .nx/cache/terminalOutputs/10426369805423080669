@@ -1,0 +1,28 @@
+
+> nx run headlessx-web:dev
+
+> pnpm run dev
+
+
+> headlessx-web@2.0.0 dev /home/saifyxpro/Desktop/SHADCN/HeadlessX/apps/web
+> next dev
+
+node:child_process:999
+    throw new ERR_INVALID_ARG_VALUE(propName, arg, 'must be a string without null bytes');
+    ^
+
+TypeError [ERR_INVALID_ARG_VALUE]: The property 'options.env['npm_config___i_g_n_o_r_e___w_o_r_k_s_p_a_c_e___r_o_o_t___c_h_e_c_k_']' must be a string without null bytes. Received '\x00t\x00r\x00u\x00e\x00'
+[90m    at validateArgumentNullCheck (node:child_process:999:11)[39m
+[90m    at normalizeSpawnArguments (node:child_process:726:7)[39m
+[90m    at spawn (node:child_process:780:13)[39m
+    at spawn (/home/saifyxpro/.local/share/pnpm/.tools/pnpm/9.15.0_tmp_125753/node_modules/[4mpnpm[24m/dist/pnpm.cjs:83019:19)
+    at runCmd_ (/home/saifyxpro/.local/share/pnpm/.tools/pnpm/9.15.0_tmp_125753/node_modules/[4mpnpm[24m/dist/pnpm.cjs:102319:20)
+    at runCmd (/home/saifyxpro/.local/share/pnpm/.tools/pnpm/9.15.0_tmp_125753/node_modules/[4mpnpm[24m/dist/pnpm.cjs:102259:9)
+    at runPackageLifecycle (/home/saifyxpro/.local/share/pnpm/.tools/pnpm/9.15.0_tmp_125753/node_modules/[4mpnpm[24m/dist/pnpm.cjs:102226:7)
+    at Array.<anonymous> (/home/saifyxpro/.local/share/pnpm/.tools/pnpm/9.15.0_tmp_125753/node_modules/[4mpnpm[24m/dist/pnpm.cjs:101443:13)
+    at LOOP (/home/saifyxpro/.local/share/pnpm/.tools/pnpm/9.15.0_tmp_125753/node_modules/[4mpnpm[24m/dist/pnpm.cjs:101470:18)
+    at chain (/home/saifyxpro/.local/share/pnpm/.tools/pnpm/9.15.0_tmp_125753/node_modules/[4mpnpm[24m/dist/pnpm.cjs:101477:9) {
+  code: [32m'ERR_INVALID_ARG_VALUE'[39m
+}
+
+Node.js v22.22.0

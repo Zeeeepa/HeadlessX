@@ -79,7 +79,7 @@ export default function GoogleSerpPage() {
             const encodedQuery = encodeURIComponent(query);
             const encodedProfileId = selectedProfileId ? `&profileId=${encodeURIComponent(selectedProfileId)}` : '';
             // Use direct backend URL to avoid Next.js proxy buffering SSE
-            const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
+            const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
             const streamUrl = `${apiUrl}/api/google-serp/stream?query=${encodedQuery}${encodedProfileId}&timeout=${timeout}`;
 
             // Use fetch + ReadableStream instead of EventSource for better SSE handling

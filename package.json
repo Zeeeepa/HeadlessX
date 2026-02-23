@@ -9,18 +9,18 @@
     },
     "scripts": {
         "preinstall": "npx only-allow pnpm",
-        "dev": "concurrently --kill-others \"pnpm run dev:backend\" \"pnpm run dev:frontend\"",
-        "dev:backend": "cross-env PORT=3001 pnpm --filter headlessx-backend run dev",
-        "dev:frontend": "pnpm --filter headlessx-frontend run dev",
-        "build": "pnpm -r build",
-        "start": "concurrently --kill-others \"pnpm run start:backend\" \"pnpm run start:frontend\"",
-        "start:backend": "cross-env PORT=3001 pnpm --filter headlessx-backend run start",
-        "start:frontend": "pnpm --filter headlessx-frontend run start",
-        "db:push": "pnpm --filter headlessx-backend run db:push",
-        "db:migrate": "pnpm --filter headlessx-backend run db:migrate",
-        "db:studio": "pnpm --filter headlessx-backend run db:studio",
-        "db:deploy": "pnpm --filter headlessx-backend run db:deploy",
-        "camoufox:fetch": "pnpm --filter headlessx-backend exec npx camoufox-js fetch",
+        "dev": "nx run-many -t dev --parallel=2",
+        "build": "nx run-many -t build",
+        "start": "nx run-many -t start --parallel=2",
+        "lint": "biome check .",
+        "lint:fix": "biome check --write .",
+        "format": "biome format --write .",
+        "knip": "knip",
+        "db:push": "nx run headlessx-api:db:push",
+        "db:migrate": "nx run headlessx-api:db:migrate",
+        "db:studio": "nx run headlessx-api:db:studio",
+        "db:deploy": "nx run headlessx-api:db:deploy",
+        "camoufox:fetch": "nx run headlessx-api:camoufox:fetch",
         "install:all": "pnpm install"
     },
     "pnpm": {
@@ -31,8 +31,10 @@
         }
     },
     "devDependencies": {
-        "concurrently": "^9.1.2",
-        "cross-env": "^10.1.0",
+        "@biomejs/biome": "^2.4.4",
+        "@nx/workspace": "^22.5.2",
+        "knip": "^5.85.0",
+        "nx": "^22.5.2",
         "only-allow": "^1.2.1"
     }
 }

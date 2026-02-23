@@ -1,0 +1,30 @@
+[tools]
+node = "22"
+
+[tasks.dev]
+description = "Run API + web in parallel"
+run = "pnpm exec nx run-many -t dev --parallel=2"
+
+[tasks.build]
+description = "Build all apps"
+run = "pnpm exec nx run-many -t build"
+
+[tasks.start]
+description = "Start all apps in production mode"
+run = "pnpm exec nx run-many -t start --parallel=2"
+
+[tasks.lint]
+description = "Lint codebase with Biome"
+run = "pnpm exec biome check ."
+
+[tasks.format]
+description = "Format codebase with Biome"
+run = "pnpm exec biome format --write ."
+
+[tasks.knip]
+description = "Find dead code and unused dependencies"
+run = "pnpm exec knip"
+
+[tasks.setup]
+description = "Install dependencies"
+run = "pnpm install"
