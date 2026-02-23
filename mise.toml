@@ -28,3 +28,7 @@ run = "pnpm exec knip"
 [tasks.setup]
 description = "Install dependencies"
 run = "pnpm install"
+
+[tasks.models]
+description = "Download AI models for CAPTCHA solving"
+run = "pnpm run models:download"
