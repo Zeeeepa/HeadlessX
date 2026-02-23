@@ -3,6 +3,12 @@
 ### Summary
 <!-- Provide a brief description of what this PR does -->
 
+### Affected Apps/Packages
+<!-- Check all that apply in the monorepo -->
+- [ ] `apps/web` (Frontend)
+- [ ] `apps/api` (Backend)
+- [ ] `scripts`
+- [ ] Infrastructure / Tooling (Nx, Biome, Knip, Docker)
 
 ### Type of Change
 <!-- Check all that apply -->
@@ -23,10 +29,13 @@
 
 ---
 
-## 🧪 Testing
+## 🧪 Testing & Quality Checks
 
-### Testing Performed
-<!-- Describe the testing you've performed -->
+### Quality Checks Performed
+<!-- Describe the testing and quality checks you've performed -->
+- [ ] I have run `mise run lint` (Biome) and fixed all issues
+- [ ] I have run `mise run knip` and removed any dead code
+- [ ] I have run `mise run build` (Nx) successfully
 - [ ] Unit tests added/updated
 - [ ] Integration tests added/updated
 - [ ] Manual testing performed

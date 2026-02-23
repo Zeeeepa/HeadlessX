@@ -27,6 +27,20 @@ body:
         - label: This feature aligns with HeadlessX's purpose and ethics
 
   - type: dropdown
+    id: affected-app
+    attributes:
+      label: Affected App/Package
+      description: Which part of the monorepo does this feature target?
+      options:
+        - apps/web (Frontend Dashboard)
+        - apps/api (Backend API)
+        - scripts (Utility Scripts)
+        - infrastructure (Docker, CI/CD)
+        - global/monorepo
+    validations:
+      required: true
+
+  - type: dropdown
     id: feature-category
     attributes:
       label: Feature Category
